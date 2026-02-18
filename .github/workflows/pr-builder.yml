@@ -13,9 +13,50 @@ env:
   GOFLAGS: "-mod=readonly"
 
 jobs:
-  security-audit:
-    name: 🔒 Security Audit
+  detect-changes:
+    name: 🔍 Detect File Changes
     if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    outputs:
+      docs_only: ${{ steps.filter.outputs.docs_only }}
+      has_powershell: ${{ steps.filter.outputs.powershell }}
+    steps:
+      - name: � Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: 🔍 Detect Changed Files
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            # docs_only is true ONLY if changes are in docs/** and nowhere else
+            docs_only:
+              - 'docs/**'
+              - '!backend/**'
+              - '!api/**'
+              - '!dbscripts/**'
+              - '!install/**'
+              - '!resources/**'
+              - '!go.mod'
+              - '!go.sum'
+              - '!Makefile'
+              - '!build.sh'
+              - '!start.sh'
+              - '!setup.sh'
+              - '!.github/workflows/pr-builder.yml'
+              - '!.github/actions/**'
+              - '!frontend/**'
+              - '!samples/**'
+              - '!tests/e2e/**'
+              - '!tests/integration/**'
+            powershell:
+              - '**.ps1'
+              - '.github/workflows/windows-powershell-validation.yml'
+
+  security-audit:
+    name: �🔒 Security Audit
+    needs: detect-changes
+    if: ${{ github.event_name == 'pull_request' && needs.detect-changes.outputs.docs-only != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
@@ -58,7 +99,8 @@ jobs:
 
   dependency-review:
     name: 🔎 Dependency Review
-    if: ${{ github.event_name == 'pull_request' }}
+    needs: detect-changes
+    if: ${{ github.event_name == 'pull_request' && needs.detect-changes.outputs.docs_only != 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -76,6 +118,7 @@ jobs:
 
   lint:
     name: 🧹 Lint Code
+    needs: detect-changes
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
@@ -105,12 +148,15 @@ jobs:
           cache-dependency-path: frontend/pnpm-lock.yaml
 
       - name: ⚙️ Set up Go Environment
+        if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
         uses: ./.github/actions/setup-go
 
       - name: 📦 Prepare golangci-lint Locally
+        if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
         run: make golangci-lint
 
       - name: 🔍 Run Backend Linter
+        if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
         run: make lint_backend
 
       - name: 🧩 Install Dependencies & Build Frontend
@@ -124,9 +170,47 @@ jobs:
           cd frontend
           pnpm nx affected --target=lint --parallel=3 --base=${{ env.NX_BASE }} --head=${{ env.NX_HEAD }}
 
+  build_docs:
+    name: 📚 Build Documentation
+    needs: detect-changes
+    if: ${{ github.event_name == 'pull_request' && needs.detect-changes.outputs.docs_only == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 'latest'
+          run_install: false
+          cache: true
+          cache-dependency-path: frontend/pnpm-lock.yaml
+
+      - name: 📦 Install Frontend Workspace Dependencies
+        run: |
+          cd frontend
+          pnpm install --frozen-lockfile
+
+      - name: 📚 Build Documentation
+        run: |
+          cd frontend
+          pnpm run build:docs
+
+      - name: ✅ Documentation Build Complete
+        run: |
+          echo "✅ Documentation-only build completed successfully!"
+          echo "ℹ️  Backend builds and integration tests were skipped for this docs-only PR."
+
   build:
     name: 🛠️ Build Product
-    if: ${{ github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request'}}
+    needs: detect-changes
+    if: ${{ needs.detect-changes.outputs.docs_only != 'true' && (github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request') }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
@@ -259,7 +343,8 @@ jobs:
 
   build_samples:
     name: 🛠️ Build Sample Apps
-    if: ${{ github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request'}}
+    needs: detect-changes
+    if: ${{ needs.detect-changes.outputs.docs_only != 'true' && (github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request') }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
@@ -293,7 +378,8 @@ jobs:
 
   test-integration:
     name: 🧪 Integration Tests (${{ matrix.database }})
-    needs: build
+    needs: [detect-changes, build]
+    if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -382,7 +468,8 @@ jobs:
 
   test-e2e:
     name: 🎭 Playwright E2E Tests
-    needs: [build, build_samples]
+    needs: [detect-changes, build, build_samples]
+    if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
