@@ -33,8 +33,7 @@ jobs:
             # Check for any changes OUTSIDE the docs folder.
             # If this is true, we need a full build.
             change_outside_docs:
-              - '**'
-              - '!docs/**'
+              - '!(docs)/**'
             # Check for any changes IN the docs folder.
             docs:
               - 'docs/**'
