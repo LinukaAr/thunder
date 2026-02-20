@@ -18,7 +18,7 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     outputs:
-      docs_only: ${{ steps.filter.outputs.change_outside_docs == 'false' }}
+      docs_only: ${{ steps.set-outputs.outputs.docs_only }}
       has_docs_changes: ${{ steps.filter.outputs.docs }}
       has_powershell: ${{ steps.filter.outputs.powershell }}
     steps:
@@ -41,6 +41,17 @@ jobs:
             powershell:
               - '**.ps1'
               - '.github/workflows/windows-powershell-validation.yml'
+      
+      - name: 🎯 Set docs_only Output
+        id: set-outputs
+        run: |
+          if [ "${{ steps.filter.outputs.change_outside_docs }}" == "false" ]; then
+            echo "docs_only=true" >> $GITHUB_OUTPUT
+            echo "✅ Docs-only changes detected"
+          else
+            echo "docs_only=false" >> $GITHUB_OUTPUT
+            echo "📦 Non-docs changes detected - full build required"
+          fi
 
   security-audit:
     name: �🔒 Security Audit
