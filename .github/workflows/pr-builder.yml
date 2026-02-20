@@ -18,10 +18,10 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     outputs:
-      docs_only: ${{ steps.filter.outputs.docs_only }}
+      docs_only: ${{ steps.filter.outputs.change_outside_docs == 'false' }}
       has_powershell: ${{ steps.filter.outputs.powershell }}
     steps:
-      - name: � Checkout Code
+      - name: 📥 Checkout Code
         uses: actions/checkout@v4
       
       - name: 🔍 Detect Changed Files
@@ -29,26 +29,11 @@ jobs:
         id: filter
         with:
           filters: |
-            # docs_only is true ONLY if changes are in docs/** and nowhere else
-            docs_only:
-              - 'docs/**'
-              - '!backend/**'
-              - '!api/**'
-              - '!dbscripts/**'
-              - '!install/**'
-              - '!resources/**'
-              - '!go.mod'
-              - '!go.sum'
-              - '!Makefile'
-              - '!build.sh'
-              - '!start.sh'
-              - '!setup.sh'
-              - '!.github/workflows/pr-builder.yml'
-              - '!.github/actions/**'
-              - '!frontend/**'
-              - '!samples/**'
-              - '!tests/e2e/**'
-              - '!tests/integration/**'
+            # Check for any changes OUTSIDE the docs folder.
+            # If this is true, we need a full build.
+            change_outside_docs:
+              - '**'
+              - '!docs/**'
             powershell:
               - '**.ps1'
               - '.github/workflows/windows-powershell-validation.yml'
@@ -56,7 +41,7 @@ jobs:
   security-audit:
     name: �🔒 Security Audit
     needs: detect-changes
-    if: ${{ github.event_name == 'pull_request' && needs.detect-changes.outputs.docs-only != 'true' }}
+    if: ${{ github.event_name == 'pull_request' && needs.detect-changes.outputs.docs_only != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
