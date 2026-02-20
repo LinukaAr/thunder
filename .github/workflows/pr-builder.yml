@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       docs_only: ${{ steps.filter.outputs.change_outside_docs == 'false' }}
+      has_docs_changes: ${{ steps.filter.outputs.docs }}
       has_powershell: ${{ steps.filter.outputs.powershell }}
     steps:
       - name: 📥 Checkout Code
@@ -34,6 +35,9 @@ jobs:
             change_outside_docs:
               - '**'
               - '!docs/**'
+            # Check for any changes IN the docs folder.
+            docs:
+              - 'docs/**'
             powershell:
               - '**.ps1'
               - '.github/workflows/windows-powershell-validation.yml'
