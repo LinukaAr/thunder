@@ -195,7 +195,7 @@ jobs:
   build:
     name: 🛠️ Build Product
     needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.docs_only != 'true' && (github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request') }}
+    if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
@@ -249,7 +249,12 @@ jobs:
           cd frontend
           pnpm build
 
-      - name: 🔨 Build Product with Coverage
+      - name: � Build Documentation
+        run: |
+          cd frontend
+          pnpm run build:docs
+
+      - name: �🔨 Build Product with Coverage
         run: |
           set -e
           export LOG_LEVEL=debug
@@ -329,7 +334,7 @@ jobs:
   build_samples:
     name: 🛠️ Build Sample Apps
     needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.docs_only != 'true' && (github.event.label.name == 'trigger-pr-builder' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request') }}
+    if: ${{ needs.detect-changes.outputs.docs_only != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Code
