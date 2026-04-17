@@ -1,7 +1,7 @@
 {
   "item": [
     {
-      "id": "7287b26c-1bed-40b0-9771-f0305cf30c69",
+      "id": "5fada0bb-92a9-4d27-ac86-a768b86811a0",
       "name": "flow-meta",
       "description": {
         "content": "Operations for retrieving flow metadata",
@@ -9,7 +9,7 @@
       },
       "item": [
         {
-          "id": "a9d79eff-1863-4093-bb65-aa1aefccefed",
+          "id": "af03fa35-c291-4de7-bff2-acf856550b87",
           "name": "Get flow metadata",
           "request": {
             "name": "Get flow metadata",
@@ -83,7 +83,7 @@
           },
           "response": [
             {
-              "id": "38dfb06d-6d0b-4e84-9226-98d7a97b6e58",
+              "id": "763ef5cc-46f3-4923-90f4-cfdb23647484",
               "name": "Flow metadata retrieved successfully",
               "originalRequest": {
                 "url": {
@@ -150,12 +150,12 @@
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"isRegistrationFlowEnabled\": \"<boolean>\",\n  \"design\": {\n    \"theme\": {\n      \"nostrud67\": false,\n      \"ine\": \"enim in irure\",\n      \"commodof5\": 66456615.75873166\n    },\n    \"layout\": {\n      \"occaecatc7\": 7941352.066798866,\n      \"dolore1c\": -92621795,\n      \"aute_44\": \"culpa exercita\",\n      \"aliqua82\": -9229374\n    }\n  },\n  \"i18n\": {\n    \"languages\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"language\": \"<string>\",\n    \"translations\": {\n      \"Ut_23\": {\n        \"qui_5\": \"<string>\"\n      }\n    },\n    \"totalResults\": \"<integer>\"\n  },\n  \"application\": {\n    \"id\": \"<uuid>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"logoUrl\": \"<uri>\",\n    \"url\": \"<uri>\",\n    \"tosUri\": \"<uri>\",\n    \"policyUri\": \"<uri>\"\n  },\n  \"ou\": {\n    \"id\": \"<uuid>\",\n    \"handle\": \"<string>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"logoUrl\": \"<uri>\",\n    \"tosUri\": \"<uri>\",\n    \"policyUri\": \"<uri>\",\n    \"cookiePolicyUri\": \"<uri>\"\n  }\n}",
+              "body": "{\n  \"isRegistrationFlowEnabled\": \"<boolean>\",\n  \"design\": {\n    \"theme\": {\n      \"est862\": false,\n      \"nisi_65\": \"pariatur ut\"\n    },\n    \"layout\": {\n      \"culpa_09\": 65882547.886399746,\n      \"incfb\": \"voluptate\"\n    }\n  },\n  \"i18n\": {\n    \"languages\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"language\": \"<string>\",\n    \"translations\": {\n      \"laboris_bce\": {\n        \"adipisicing28\": \"<string>\",\n        \"dolore_4c8\": \"<string>\"\n      }\n    },\n    \"totalResults\": \"<integer>\"\n  },\n  \"application\": {\n    \"id\": \"<uuid>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"logoUrl\": \"<uri>\",\n    \"url\": \"<uri>\",\n    \"tosUri\": \"<uri>\",\n    \"policyUri\": \"<uri>\"\n  },\n  \"ou\": {\n    \"id\": \"<uuid>\",\n    \"handle\": \"<string>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"logoUrl\": \"<uri>\",\n    \"tosUri\": \"<uri>\",\n    \"policyUri\": \"<uri>\",\n    \"cookiePolicyUri\": \"<uri>\"\n  }\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "eb0c57b6-a821-4e0f-a36f-a57666518b55",
+              "id": "7c9314a6-d2d7-4acd-8ca6-e51f9415cdef",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -227,7 +227,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "e4c5124e-0e5b-431f-93ef-743ca61e35e3",
+              "id": "ab9eb599-90a3-4fb0-ad89-6291a252e7f5",
               "name": "Resource not found",
               "originalRequest": {
                 "url": {
@@ -299,7 +299,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "fedf422e-a385-4003-8beb-26798ac9e863",
+              "id": "28d3221e-6e4a-4d76-b37c-dc09c11cb4b1",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -407,7 +407,7 @@
     }
   ],
   "info": {
-    "_postman_id": "04a3557f-00a2-4637-84b6-9e16bb2c4526",
+    "_postman_id": "11fee787-691f-401e-aaf6-c141faf37639",
     "name": "Flow Metadata API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {

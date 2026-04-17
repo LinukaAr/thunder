@@ -1,7 +1,7 @@
 {
   "item": [
     {
-      "id": "f16ac12c-03a0-4d83-b225-98b957061d3a",
+      "id": "64192e5a-5061-49e9-bed6-f675487f11e4",
       "name": "languages",
       "description": {
         "content": "List supported languages",
@@ -9,7 +9,7 @@
       },
       "item": [
         {
-          "id": "5eaef676-6bcb-4b4c-9b13-7f055a0ccffa",
+          "id": "0c1cf975-8737-4b04-9355-057c1c809632",
           "name": "List all languages",
           "request": {
             "name": "List all languages",
@@ -58,7 +58,7 @@
           },
           "response": [
             {
-              "id": "800de346-145a-40c3-8d93-a1cab44470e1",
+              "id": "08026900-0471-4cf6-bac7-dbc69a51cbfc",
               "name": "List of language tags retrieved successfully",
               "originalRequest": {
                 "url": {
@@ -121,7 +121,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "1dd3800e-4b69-4314-9bc1-b9f6cd9f58ca",
+              "id": "20bdfacd-523c-4b32-a2ec-d86b9c7104fc",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -193,7 +193,7 @@
       "event": []
     },
     {
-      "id": "6cc79038-8306-487f-a099-4ed98608b315",
+      "id": "0082032d-65af-4196-b151-a0363229ae83",
       "name": "resolve",
       "description": {
         "content": "Resolve translations (runtime)",
@@ -201,7 +201,7 @@
       },
       "item": [
         {
-          "id": "88fb4c64-b1ed-44e3-be06-605b52008680",
+          "id": "0fa0b826-76be-4729-9d40-531ba6101c6c",
           "name": "Resolve all translations for a language",
           "request": {
             "name": "Resolve all translations for a language",
@@ -267,7 +267,7 @@
           },
           "response": [
             {
-              "id": "09694fc6-9e4f-4bdb-896b-ce2e18a96dd0",
+              "id": "eb56687a-05de-4460-b2d9-06c58bfd9ca1",
               "name": "Translations resolved successfully",
               "originalRequest": {
                 "url": {
@@ -340,12 +340,12 @@
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"language\": \"<string>\",\n  \"translations\": {\n    \"ipsum_4\": {\n      \"Duis2\": \"<string>\"\n    },\n    \"ide0c\": {\n      \"sunt_75\": \"<string>\"\n    },\n    \"proident_85\": {\n      \"laborum_72a\": \"<string>\",\n      \"commodo37\": \"<string>\"\n    },\n    \"ullamcocf\": {\n      \"non_25\": \"<string>\",\n      \"velit_ae\": \"<string>\",\n      \"adipisicing_9\": \"<string>\"\n    }\n  },\n  \"totalResults\": \"<integer>\"\n}",
+              "body": "{\n  \"language\": \"<string>\",\n  \"translations\": {\n    \"deserunt_44e\": {\n      \"adipisicing_01\": \"<string>\",\n      \"commodo_d21\": \"<string>\"\n    },\n    \"magna_6d\": {\n      \"Ut_6\": \"<string>\",\n      \"voluptate__65\": \"<string>\",\n      \"dolor_39\": \"<string>\"\n    },\n    \"incc\": {\n      \"incididunt1d\": \"<string>\"\n    }\n  },\n  \"totalResults\": \"<integer>\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "965774df-7b0e-46ef-9655-4b2072b87daa",
+              "id": "79b490a0-f8a2-400a-92aa-012e63c8c4c0",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -423,7 +423,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "41f66de0-0c96-4f90-98b4-ddbef076b967",
+              "id": "bc3f03b6-1f58-49e5-afce-35181e8a028d",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -507,7 +507,7 @@
           }
         },
         {
-          "id": "548597eb-3681-49bc-8876-ec923f1388ef",
+          "id": "d868ff3b-8620-4a27-ba02-26122ef5725d",
           "name": "Resolve a single translation",
           "request": {
             "name": "Resolve a single translation",
@@ -584,7 +584,7 @@
           },
           "response": [
             {
-              "id": "1acf3c9b-bad2-46a1-9774-f4e3a947517e",
+              "id": "fd0b1c86-adeb-44f1-a3ae-dbeece5675fc",
               "name": "Translation resolved successfully",
               "originalRequest": {
                 "url": {
@@ -675,7 +675,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "b27cca0c-a0f4-414b-af93-43137abcd5e1",
+              "id": "d2bf48c6-c52f-4da5-9915-b7a0baa3a0cc",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -766,7 +766,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "c5951c5c-bf9f-40bc-83da-cfde2c6057fb",
+              "id": "e9095aa1-5588-4843-86f6-671dd4294aa0",
               "name": "Resource not found",
               "originalRequest": {
                 "url": {
@@ -857,7 +857,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "6be2c296-7f65-4b7c-bb6a-bfd80aa74224",
+              "id": "c526f486-8ba1-40cb-91b4-84d5b64c4a96",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -957,7 +957,7 @@
       "event": []
     },
     {
-      "id": "5c51b23d-e854-479a-b09e-43a19cdb3d51",
+      "id": "ec816641-dc25-4d52-8374-56493544191d",
       "name": "management",
       "description": {
         "content": "Manage translations (admin)",
@@ -965,7 +965,7 @@
       },
       "item": [
         {
-          "id": "61c6e817-e1ad-45fa-a8ce-fcc54e884b61",
+          "id": "0232e49f-9ee6-40a5-b23f-fd97223fb52f",
           "name": "Set translations for a language",
           "request": {
             "name": "Set translations for a language",
@@ -1026,7 +1026,7 @@
             "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"translations\": {\n    \"sunt97\": {\n      \"amet_4\": \"<string>\"\n    },\n    \"deserunt_e8\": {\n      \"do_0a2\": \"<string>\"\n    },\n    \"occaecatfc\": {\n      \"minim0bb\": \"<string>\",\n      \"est_34\": \"<string>\"\n    }\n  }\n}",
+              "raw": "{\n  \"translations\": {\n    \"nisi_0\": {\n      \"dolor76_\": \"<string>\",\n      \"est_5c\": \"<string>\",\n      \"amet_c\": \"<string>\"\n    },\n    \"proident8\": {\n      \"cupidatat_ef\": \"<string>\",\n      \"et_8\": \"<string>\"\n    },\n    \"sed_ef\": {\n      \"sit3\": \"<string>\",\n      \"eu_d5\": \"<string>\"\n    }\n  }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1036,7 +1036,7 @@
           },
           "response": [
             {
-              "id": "765e8d0b-4e8c-4b2d-93c5-d79641d072a5",
+              "id": "6cc5a03d-07ce-444e-a7ba-c84a90b36972",
               "name": "Custom translations set successfully",
               "originalRequest": {
                 "url": {
@@ -1095,7 +1095,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"translations\": {\n    \"sunt97\": {\n      \"amet_4\": \"<string>\"\n    },\n    \"deserunt_e8\": {\n      \"do_0a2\": \"<string>\"\n    },\n    \"occaecatfc\": {\n      \"minim0bb\": \"<string>\",\n      \"est_34\": \"<string>\"\n    }\n  }\n}",
+                  "raw": "{\n  \"translations\": {\n    \"nisi_0\": {\n      \"dolor76_\": \"<string>\",\n      \"est_5c\": \"<string>\",\n      \"amet_c\": \"<string>\"\n    },\n    \"proident8\": {\n      \"cupidatat_ef\": \"<string>\",\n      \"et_8\": \"<string>\"\n    },\n    \"sed_ef\": {\n      \"sit3\": \"<string>\",\n      \"eu_d5\": \"<string>\"\n    }\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1111,12 +1111,12 @@
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"language\": \"<string>\",\n  \"translations\": {\n    \"ipsum_4\": {\n      \"Duis2\": \"<string>\"\n    },\n    \"ide0c\": {\n      \"sunt_75\": \"<string>\"\n    },\n    \"proident_85\": {\n      \"laborum_72a\": \"<string>\",\n      \"commodo37\": \"<string>\"\n    },\n    \"ullamcocf\": {\n      \"non_25\": \"<string>\",\n      \"velit_ae\": \"<string>\",\n      \"adipisicing_9\": \"<string>\"\n    }\n  },\n  \"totalResults\": \"<integer>\"\n}",
+              "body": "{\n  \"language\": \"<string>\",\n  \"translations\": {\n    \"deserunt_44e\": {\n      \"adipisicing_01\": \"<string>\",\n      \"commodo_d21\": \"<string>\"\n    },\n    \"magna_6d\": {\n      \"Ut_6\": \"<string>\",\n      \"voluptate__65\": \"<string>\",\n      \"dolor_39\": \"<string>\"\n    },\n    \"incc\": {\n      \"incididunt1d\": \"<string>\"\n    }\n  },\n  \"totalResults\": \"<integer>\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "fbdbadec-232a-42bc-a11e-cf1646c5c3eb",
+              "id": "e8d2f263-b892-4d27-a58a-6a582d3d5e93",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -1175,7 +1175,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"translations\": {\n    \"sunt97\": {\n      \"amet_4\": \"<string>\"\n    },\n    \"deserunt_e8\": {\n      \"do_0a2\": \"<string>\"\n    },\n    \"occaecatfc\": {\n      \"minim0bb\": \"<string>\",\n      \"est_34\": \"<string>\"\n    }\n  }\n}",
+                  "raw": "{\n  \"translations\": {\n    \"nisi_0\": {\n      \"dolor76_\": \"<string>\",\n      \"est_5c\": \"<string>\",\n      \"amet_c\": \"<string>\"\n    },\n    \"proident8\": {\n      \"cupidatat_ef\": \"<string>\",\n      \"et_8\": \"<string>\"\n    },\n    \"sed_ef\": {\n      \"sit3\": \"<string>\",\n      \"eu_d5\": \"<string>\"\n    }\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1196,7 +1196,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "16b69917-e56f-4e75-b7c4-be025ea86f6d",
+              "id": "68247fc1-8083-4573-a3f5-df215380853d",
               "name": "Authentication required",
               "originalRequest": {
                 "url": {
@@ -1255,7 +1255,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"translations\": {\n    \"sunt97\": {\n      \"amet_4\": \"<string>\"\n    },\n    \"deserunt_e8\": {\n      \"do_0a2\": \"<string>\"\n    },\n    \"occaecatfc\": {\n      \"minim0bb\": \"<string>\",\n      \"est_34\": \"<string>\"\n    }\n  }\n}",
+                  "raw": "{\n  \"translations\": {\n    \"nisi_0\": {\n      \"dolor76_\": \"<string>\",\n      \"est_5c\": \"<string>\",\n      \"amet_c\": \"<string>\"\n    },\n    \"proident8\": {\n      \"cupidatat_ef\": \"<string>\",\n      \"et_8\": \"<string>\"\n    },\n    \"sed_ef\": {\n      \"sit3\": \"<string>\",\n      \"eu_d5\": \"<string>\"\n    }\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1276,7 +1276,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "8c935579-88eb-49b0-8273-f5674bfb9532",
+              "id": "8ad16a11-5687-438c-840a-e879833d744b",
               "name": "Insufficient permissions",
               "originalRequest": {
                 "url": {
@@ -1335,7 +1335,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"translations\": {\n    \"sunt97\": {\n      \"amet_4\": \"<string>\"\n    },\n    \"deserunt_e8\": {\n      \"do_0a2\": \"<string>\"\n    },\n    \"occaecatfc\": {\n      \"minim0bb\": \"<string>\",\n      \"est_34\": \"<string>\"\n    }\n  }\n}",
+                  "raw": "{\n  \"translations\": {\n    \"nisi_0\": {\n      \"dolor76_\": \"<string>\",\n      \"est_5c\": \"<string>\",\n      \"amet_c\": \"<string>\"\n    },\n    \"proident8\": {\n      \"cupidatat_ef\": \"<string>\",\n      \"et_8\": \"<string>\"\n    },\n    \"sed_ef\": {\n      \"sit3\": \"<string>\",\n      \"eu_d5\": \"<string>\"\n    }\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1356,7 +1356,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "34d56361-57e7-4851-9f56-c3267246167f",
+              "id": "7589cf0b-de4d-4a44-be0e-872814c887cd",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -1415,7 +1415,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"translations\": {\n    \"sunt97\": {\n      \"amet_4\": \"<string>\"\n    },\n    \"deserunt_e8\": {\n      \"do_0a2\": \"<string>\"\n    },\n    \"occaecatfc\": {\n      \"minim0bb\": \"<string>\",\n      \"est_34\": \"<string>\"\n    }\n  }\n}",
+                  "raw": "{\n  \"translations\": {\n    \"nisi_0\": {\n      \"dolor76_\": \"<string>\",\n      \"est_5c\": \"<string>\",\n      \"amet_c\": \"<string>\"\n    },\n    \"proident8\": {\n      \"cupidatat_ef\": \"<string>\",\n      \"et_8\": \"<string>\"\n    },\n    \"sed_ef\": {\n      \"sit3\": \"<string>\",\n      \"eu_d5\": \"<string>\"\n    }\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1442,7 +1442,7 @@
           }
         },
         {
-          "id": "fce98f76-74dd-4302-b123-4dbfd0606939",
+          "id": "7d7483d8-a7fd-4c63-a330-b6f5fd9814e6",
           "name": "Clear all translations for a language",
           "request": {
             "name": "Clear all translations for a language",
@@ -1500,7 +1500,7 @@
           },
           "response": [
             {
-              "id": "0525192c-6d11-4ea9-8e0a-477f39f05fa0",
+              "id": "4f05a156-fcfa-45e7-b2e2-b3076e8ef55e",
               "name": "Translations reset to default successfully",
               "originalRequest": {
                 "url": {
@@ -1568,7 +1568,7 @@
               "_postman_previewlanguage": "text"
             },
             {
-              "id": "c5efc7c1-db0d-4366-bb55-bcc4ebd9252a",
+              "id": "fba10174-57b9-4af1-b42e-692bc8c0287f",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -1640,7 +1640,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "0a63c5ab-1f2d-4257-b012-3bb8ae82409d",
+              "id": "6de1eeb1-376b-454a-8319-c108a76396f4",
               "name": "Authentication required",
               "originalRequest": {
                 "url": {
@@ -1712,7 +1712,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "86a3ee49-64f3-48be-a1ab-467bb5c7b31a",
+              "id": "f525558e-bf08-458a-a3dc-5a925ea47ac4",
               "name": "Insufficient permissions",
               "originalRequest": {
                 "url": {
@@ -1784,7 +1784,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "830abc64-f320-4b3a-9944-ffe891d9091c",
+              "id": "beff014d-5765-4d13-9209-4c3c7c38a2dd",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -1862,7 +1862,7 @@
           }
         },
         {
-          "id": "9fdd08e0-4a3d-4746-a983-30ddf008a10e",
+          "id": "9d0408a1-2b80-4e35-91f8-bb5dd052b3a9",
           "name": "Set a single translation",
           "request": {
             "name": "Set a single translation",
@@ -1951,7 +1951,7 @@
           },
           "response": [
             {
-              "id": "5ef69a36-1a21-42ec-8706-a2e6cd98d896",
+              "id": "d6512336-49f9-4173-a4f2-7901219a5f78",
               "name": "Translation set successfully",
               "originalRequest": {
                 "url": {
@@ -2049,7 +2049,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "a43cbc3d-56c6-4f96-b772-c3ad3716a55a",
+              "id": "a75f69fb-b12d-419d-9c45-a0796847e086",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -2147,7 +2147,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "3717e99d-3aea-4887-826e-7a11312d1b6d",
+              "id": "4d8da9b4-2c6b-4f04-9aad-71389c9adf9c",
               "name": "Authentication required",
               "originalRequest": {
                 "url": {
@@ -2245,7 +2245,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "c5430a19-2b26-458f-b469-01bac45621e1",
+              "id": "4bb5402c-8ed1-4236-91a1-0bcec07fba87",
               "name": "Insufficient permissions",
               "originalRequest": {
                 "url": {
@@ -2343,7 +2343,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "9a0d10c3-8d88-4721-abae-375e0c309bfa",
+              "id": "9f3ced52-2c1a-4cce-9127-1cfd1a15fc4d",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -2447,7 +2447,7 @@
           }
         },
         {
-          "id": "02455dc0-d87d-442d-b324-d1cd7237f514",
+          "id": "d949f726-236d-480b-ab51-e0a8e64358b4",
           "name": "Clear a single translation",
           "request": {
             "name": "Clear a single translation",
@@ -2523,7 +2523,7 @@
           },
           "response": [
             {
-              "id": "15d57608-5b7f-456b-83f5-6fe51c962412",
+              "id": "cdc0beb0-9e24-4ae2-928d-a59a90fa6f12",
               "name": "Translations reset to default successfully",
               "originalRequest": {
                 "url": {
@@ -2609,7 +2609,7 @@
               "_postman_previewlanguage": "text"
             },
             {
-              "id": "7f1dcbab-757a-464d-bf6c-9e3dbe78075a",
+              "id": "09eef374-76e4-48e2-9f47-b9899f7eb976",
               "name": "Bad request - Invalid input",
               "originalRequest": {
                 "url": {
@@ -2699,7 +2699,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "ad59f9c0-a381-43e2-9ec2-7e0a05921dab",
+              "id": "ee5104f0-b3c6-4070-939b-802e366785a4",
               "name": "Authentication required",
               "originalRequest": {
                 "url": {
@@ -2789,7 +2789,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "04b86968-d113-4b0f-afb0-b61738d654fe",
+              "id": "0332b46c-100a-49a5-a825-4860c65c3340",
               "name": "Insufficient permissions",
               "originalRequest": {
                 "url": {
@@ -2879,7 +2879,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "6f076ed0-be3d-439d-8d81-73c21ff7e7e7",
+              "id": "5e936d59-8910-4994-a067-0533823d8300",
               "name": "Resource not found",
               "originalRequest": {
                 "url": {
@@ -2969,7 +2969,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "e3228443-a15f-4b40-9993-57901c69a287",
+              "id": "8f61c537-612b-4b7d-8f32-c5e4e623262f",
               "name": "Internal server error",
               "originalRequest": {
                 "url": {
@@ -3116,7 +3116,7 @@
     ]
   },
   "info": {
-    "_postman_id": "084c6da0-0ca6-439c-9a90-508423951e25",
+    "_postman_id": "8e4531c3-9053-4fcd-911a-28190679124a",
     "name": "Thunder i18n API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
